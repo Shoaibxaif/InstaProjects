@@ -1,0 +1,7 @@
+:root {
+    --navbar-height: 4rem; /* Adjust this to your navbar height */
+  }
+  
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
