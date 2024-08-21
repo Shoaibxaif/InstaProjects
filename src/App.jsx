@@ -6,6 +6,7 @@ import PortfolioSection from './components/PorfolioSection'
 import Testimonial from './components/Testimonial'
 import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
+import Freeresources from './components/Freeresources'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Hero/>
       <AboutServices/>
       <PortfolioSection/>
+      <Freeresources/>
       <Testimonial/>
       <ContactSection/>
       <Footer/>
