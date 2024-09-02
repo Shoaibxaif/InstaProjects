@@ -1,11 +1,16 @@
 import React, { useState } from "react";
-import report1 from "../assets/portfolio/report1.pdf"; 
-import ppt1 from "../assets/portfolio/College_ppt1.pdf"; 
-import ppt2 from "../assets/portfolio/College_ppt2.pptx"; 
-import cover1 from "../assets/portfolio/cover1.pdf"; 
-import cover2 from "../assets/portfolio/cover2.pdf"; 
-import poster1 from "../assets/portfolio/poster1.pdf"; 
+import report1 from "../assets/portfolio/report1.pdf";
+import ppt1 from "../assets/portfolio/College_ppt1.pdf";
+import ppt2 from "../assets/portfolio/College_ppt2.pptx";
+import cover1 from "../assets/portfolio/cover1.pdf";
+import cover2 from "../assets/portfolio/cover2.pdf";
+import poster1 from "../assets/portfolio/poster1.pdf";
 
+// images
+
+import report1_img from "../assets/portfolio_thumnails/report1.svg";
+import ppt1_img from "../assets/portfolio_thumnails/ppt1.svg";
+import ppt2_img from "../assets/portfolio_thumnails/ppt2.svg";
 
 const Freeresources = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -16,52 +21,51 @@ const Freeresources = () => {
   const projects = [
     {
       id: 1,
-      title: "Acme Website",
-      description: "A modern and responsive website for Acme Inc.",
+      title: "Technical Report",
+      description: "A Project Report On E-commerce Platform",
       category: "assignment",
-      image: img,
-      url: report1, // Correctly use the imported PDF file as the URL
+      image: report1_img,
+      url: report1,
     },
     {
       id: 2,
-      title: "Rocket Presentation App",
-      description: "A sleek and intuitive mobile app for Rocket Inc.",
+      title: "Technical Presentation",
+      description: "A Powerpoint Presentation on E-commerce Platform",
       category: "presentation",
-      image: img,
-      url: ppt1
+      image: ppt1_img,
+      url: ppt1,
     },
     {
       id: 3,
-      title: "Bloom Design System",
-      description: "A comprehensive design system for Bloom Co.",
-      category: "covers",
-      image: img,
-      url: ppt2
+      title: "Technical Presentation",
+      description: "A Powerpoint Presentation on Hotel Mangagement System",
+      category: "presentation",
+      image: ppt2_img,
+      url: ppt2,
     },
     {
       id: 4,
-      title: "Quantum Assignment App",
-      description:
-        "A powerful assignment application for Quantum Technologies.",
-      category: "assignment",
+      title: "Cover Page",
+      description: "creative cover-page for Assignment",
+      category: "covers",
       image: img,
-      url: cover1
+      url: cover1,
     },
     {
       id: 5,
-      title: "Nebula Presentation SDK",
-      description: "A feature-rich presentation SDK for Nebula Inc.",
-      category: "presentation",
+      title: "Cover Page",
+      description: "creative cover-page for college project",
+      category: "covers",
       image: img,
-      url: cover2
+      url: cover2,
     },
     {
       id: 6,
-      title: "Pixel Perfect Branding",
-      description: "A visually stunning brand identity for Pixel Co.",
-      category: "covers",
+      title: "Poster",
+      description: "A poster for college project",
+      category: "posters",
       image: img,
-      url: poster1
+      url: poster1,
     },
   ];
 
@@ -126,6 +130,16 @@ const Freeresources = () => {
           >
             Covers
           </button>
+          <button
+            onClick={() => setActiveCategory("posters")}
+            className={`${
+              activeCategory === "posters"
+                ? "bg-[#E94560] text-[#F5F5F5]"
+                : "bg-[#1A1A2E] text-[#F5F5F5] border border-[#E94560] hover:bg-[#FF5A7A]"
+            } px-3 py-2 sm:px-4 sm:py-2 text-xs sm:text-sm md:text-base rounded-md`}
+          >
+            Posters
+          </button>
         </div>
 
         {/* Projects Grid */}
@@ -135,15 +149,15 @@ const Freeresources = () => {
               key={project.id}
               className="relative overflow-hidden rounded-lg group bg-[#16213E]"
               href={project.url}
-              title={`View ${project.title}`} 
+              title={`View ${project.title}`}
               target="_blank"
-              rel="noopener noreferrer" 
+              rel="noopener noreferrer"
             >
               <img
                 src={project.image}
                 alt={project.title}
                 className="object-cover w-full h-60"
-                style={{ aspectRatio: "400/300", objectFit: "cover" }}
+               
               />
               <div className="p-4 text-center">
                 <h3 className="text-lg font-semibold md:text-xl text-[#F5F5F5]">
