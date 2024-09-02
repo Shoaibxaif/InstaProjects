@@ -40,7 +40,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="bg-[#16213E]" id="contact">
+    <section className="bg-[#1A1A2E]" id="contact">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div className="text-center mb-12">
           <h2 className="font-heading font-bold text-[#F5F5F5] text-3xl sm:text-5xl mb-4">
@@ -49,10 +49,16 @@ const ContactSection = () => {
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           <div>
-            <p className="text-lg text-[#F5F5F5] opacity-75 mb-12">
-              Class aptent taciti sociosqu ad litora torquent per conubia
-              nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut
-              scelerisque sagittis ante, ac tincidunt sem venenatis ut.
+            <text className="text-xl font-semibold text-[#F5F5F5]">
+              Need Help with Your Assignments or Projects?{" "}
+            </text>
+            <p className="text-lg text-[#F5F5F5]  mb-12 mt-4">
+              Let us ensure your work is completed on time and to the highest
+              standard. Whether you're dealing with a tight deadline or a
+              complex task, our team is ready to assist. Contact us to discuss
+              your needs, and we'll take the stress out of your academic
+              workload. We're dedicated to delivering reliable, high-quality
+              results that help you succeed.
             </p>
             <ul>
               <li className="flex mb-6">
@@ -78,10 +84,10 @@ const ContactSection = () => {
                     Contact
                   </h3>
                   <p className="text-[#F5F5F5] opacity-75">
-                    Mobile: +1 (123) 456-7890
+                    Mobile: +91 7505910225
                   </p>
                   <p className="text-[#F5F5F5] opacity-75">
-                    Mail: tailnext@gmail.com
+                    Mail: instaprojects2024@gmail.com
                   </p>
                 </div>
               </li>
@@ -161,7 +167,8 @@ const ContactSection = () => {
                 className="w-full bg-[#E94560] hover:bg-[#FF2E63] text-[#F5F5F5] px-6 py-3 font-xl rounded-md transition duration-300"
                 disabled={loading} // Disable button when loading
               >
-                {loading ? "Sending..." : "Send Message"} {/* Show loading state */}
+                {loading ? "Sending..." : "Send Message"}{" "}
+                {/* Show loading state */}
               </button>
             </form>
           </div>

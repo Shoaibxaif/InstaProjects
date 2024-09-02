@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,45 +51,60 @@ const Navbar = () => {
         >
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-[#16213E] rounded-lg bg-[#16213E] md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent">
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-[#F5F5F5] bg-[#E94560] rounded md:bg-transparent md:text-[#E94560] md:p-0"
+              <Link
+                to="hero"
+                smooth={true}
+                duration={500}
+                className="block py-2 px-3 text-[#F5F5F5] bg-[#E94560] rounded md:bg-transparent md:text-[#E94560] md:p-0 cursor-pointer"
                 aria-current="page"
+                onClick={toggleMenu} // Close menu on click
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-[#F5F5F5] rounded hover:bg-[#0F3460] md:hover:bg-transparent md:border-0 md:hover:text-[#E94560] md:p-0"
+              <Link
+                to="about-services"
+                smooth={true}
+                duration={500}
+                className="block py-2 px-3 text-[#F5F5F5] rounded hover:bg-[#0F3460] md:hover:bg-transparent md:border-0 md:hover:text-[#E94560] md:p-0 cursor-pointer"
+                onClick={toggleMenu}
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-[#F5F5F5] rounded hover:bg-[#0F3460] md:hover:bg-transparent md:border-0 md:hover:text-[#E94560] md:p-0"
+              <Link
+                to="free-resources"
+                smooth={true}
+                duration={500}
+                className="block py-2 px-3 text-[#F5F5F5] rounded hover:bg-[#0F3460] md:hover:bg-transparent md:border-0 md:hover:text-[#E94560] md:p-0 cursor-pointer"
+                onClick={toggleMenu}
               >
-                Services
-              </a>
+                Free Resources
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-[#F5F5F5] rounded hover:bg-[#0F3460] md:hover:bg-transparent md:border-0 md:hover:text-[#E94560] md:p-0"
+              <Link
+                to="testimonials"
+                smooth={true}
+                duration={500}
+                className="block py-2 px-3 text-[#F5F5F5] rounded hover:bg-[#0F3460] md:hover:bg-transparent md:border-0 md:hover:text-[#E94560] md:p-0 cursor-pointer"
+                onClick={toggleMenu}
               >
-                Pricing
-              </a>
+                Testimonials
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-[#F5F5F5] rounded hover:bg-[#0F3460] md:hover:bg-transparent md:border-0 md:hover:text-[#E94560] md:p-0"
+              <Link
+                to="contact"
+                smooth={true}
+                duration={500}
+                className="block py-2 px-3 text-[#F5F5F5] rounded hover:bg-[#0F3460] md:hover:bg-transparent md:border-0 md:hover:text-[#E94560] md:p-0 cursor-pointer"
+                onClick={toggleMenu}
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
