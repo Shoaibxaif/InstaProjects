@@ -101,9 +101,12 @@ const ContactSection = () => {
                   <p className="text-[#F5F5F5] opacity-75">
                     Mobile: +91 7505910225
                   </p>
-                  <p className="text-[#F5F5F5] opacity-75">
+                  <a
+                    href="mailto:instaprojects2024@gmail.com"
+                    className="text-[#F5F5F5] opacity-75"
+                  >
                     Mail: instaprojects2024@gmail.com
-                  </p>
+                  </a>
                 </div>
               </li>
               <li className="flex">

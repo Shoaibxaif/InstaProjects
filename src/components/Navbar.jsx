@@ -81,7 +81,7 @@ const Navbar = () => {
                 className="block py-2 px-3 text-[#F5F5F5] rounded hover:bg-[#0F3460] md:hover:bg-transparent md:border-0 md:hover:text-[#E94560] md:p-0 cursor-pointer"
                 onClick={toggleMenu}
               >
-                Free Resources
+                Portfolio
               </Link>
             </li>
             <li>
