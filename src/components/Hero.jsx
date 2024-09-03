@@ -1,5 +1,7 @@
 import React from 'react';
-import '../index.css'; // Ensure this import is present if you use external CSS
+import '../index.css'; 
+import { Link } from "react-scroll";
+
 
 const Hero = () => {
   return (
@@ -37,12 +39,14 @@ const Hero = () => {
             </p>
             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center">
               <div className="rounded-md shadow">
-                <a
+                <Link
                   className="flex w-full items-center justify-center rounded-md border border-transparent bg-[#0F3460] px-8 py-3 text-base font-medium text-[#F5F5F5] hover:bg-[#E94560] md:py-4 md:px-10 md:text-lg"
-                  href="#"
+                  to="free-resources"
+                  smooth={true}
+                duration={500}
                 >
                   Explore Now 🚀
-                </a>
+                </Link>
               </div>
             </div>
           </div>

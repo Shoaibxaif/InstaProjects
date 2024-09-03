@@ -9,8 +9,11 @@ import poster1 from "../assets/portfolio/poster1.pdf";
 // images
 
 import report1_img from "../assets/portfolio_thumnails/report1.svg";
-import ppt1_img from "../assets/portfolio_thumnails/ppt1.svg";
-import ppt2_img from "../assets/portfolio_thumnails/ppt2.svg";
+import ppt1_img from "../assets/portfolio_thumnails/ppt1.png";
+import ppt2_img from "../assets/portfolio_thumnails/ppt2.png";
+import cover1_img from "../assets/portfolio_thumnails/cover1.png";
+import cover2_img from "../assets/portfolio_thumnails/cover2.png";
+import poster1_img from "../assets/portfolio_thumnails/poster1.png";
 
 const Freeresources = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -48,7 +51,7 @@ const Freeresources = () => {
       title: "Cover Page",
       description: "creative cover-page for Assignment",
       category: "covers",
-      image: img,
+      image: cover1_img,
       url: cover1,
     },
     {
@@ -56,7 +59,7 @@ const Freeresources = () => {
       title: "Cover Page",
       description: "creative cover-page for college project",
       category: "covers",
-      image: img,
+      image: cover2_img,
       url: cover2,
     },
     {
@@ -64,7 +67,7 @@ const Freeresources = () => {
       title: "Poster",
       description: "A poster for college project",
       category: "posters",
-      image: img,
+      image: poster1_img,
       url: poster1,
     },
   ];
@@ -82,7 +85,7 @@ const Freeresources = () => {
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-[#F5F5F5]">
             Portfolio
           </h2>
-          <p className="max-w-3xl mx-auto mt-4 text-[#F5F5F5] md:text-xl lg:text-lg xl:text-xl">
+          <p className="max-w-4xl mx-auto mt-4 text-[#F5F5F5] md:text-xl lg:text-lg xl:text-xl">
             Check out some of our recent work across assignments, presentations,
             covers, and reports.
           </p>
@@ -157,7 +160,6 @@ const Freeresources = () => {
                 src={project.image}
                 alt={project.title}
                 className="object-cover w-full h-60"
-               
               />
               <div className="p-4 text-center">
                 <h3 className="text-lg font-semibold md:text-xl text-[#F5F5F5]">

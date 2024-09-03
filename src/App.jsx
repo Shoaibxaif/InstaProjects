@@ -10,6 +10,8 @@ import Freeresources from "./components/Freeresources";
 import Pricingtable from "./components/Pricingtable";
 import { Element } from "react-scroll";
 import WhatsAppButton from "./components/WhatsAppButton";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; 
 
 const App = () => {
   return (
@@ -38,6 +40,7 @@ const App = () => {
       </Element>
       <Footer />
       <WhatsAppButton />
+      <ToastContainer position="top-center" autoClose={3000} />
     </>
   );
 };

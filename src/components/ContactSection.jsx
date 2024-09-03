@@ -1,5 +1,7 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
+import validator from "validator";
 
 const ContactSection = () => {
   const form = useRef();
@@ -8,6 +10,7 @@ const ContactSection = () => {
     email: "",
     message: "",
   });
+  const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false); // Loading state
 
   const handleChange = (e) => {
@@ -18,23 +21,35 @@ const ContactSection = () => {
     e.preventDefault();
     setLoading(true); // Start loading
 
+    // Validation
+    let formErrors = {};
+    if (!validator.isEmail(formData.email)) {
+      formErrors.email = "Please enter a valid email address.";
+    }
+
+    if (Object.keys(formErrors).length > 0) {
+      setErrors(formErrors);
+      setLoading(false); // Stop loading
+      return;
+    }
+
     emailjs
       .sendForm(
-        "service_30f8qy9",
-        "template_ptn32n4",
+        "service_g3rg19z",
+        "template_4isxz5v",
         form.current,
-        "gA0nD_4--SmWLsI_f"
+        "_JIgGb3XbNAVr-_g7"
       )
       .then(
         () => {
           setLoading(false); // Stop loading
-          console.log("SUCCESS!");
-          alert("Message sent successfully!");
+          setFormData({ name: "", email: "", message: "" }); // Reset form
+          setErrors({}); // Clear errors
+          toast.success("Message sent successfully!");
         },
         (error) => {
           setLoading(false); // Stop loading
-          console.log("FAILED...", error.text);
-          alert("Failed to send the message. Please try again.");
+          toast.error("Failed to send the message. Please try again.");
         }
       );
   };
@@ -52,7 +67,7 @@ const ContactSection = () => {
             <text className="text-xl font-semibold text-[#F5F5F5]">
               Need Help with Your Assignments or Projects?{" "}
             </text>
-            <p className="text-lg text-[#F5F5F5]  mb-12 mt-4">
+            <p className="text-lg text-[#F5F5F5] mb-12 mt-4">
               Let us ensure your work is completed on time and to the highest
               standard. Whether you're dealing with a tight deadline or a
               complex task, our team is ready to assist. Contact us to discuss
@@ -148,9 +163,14 @@ const ContactSection = () => {
                   placeholder="Your email address"
                   value={formData.email}
                   onChange={handleChange}
-                  className="mb-2 w-full rounded-md border-none py-2 px-4 shadow-md bg-[#16213E] text-[#F5F5F5] focus:ring-2 focus:ring-[#E94560]"
+                  className={`mb-2 w-full rounded-md border-none py-2 px-4 shadow-md bg-[#16213E] text-[#F5F5F5] focus:ring-2 focus:ring-[#E94560] ${
+                    errors.email ? "border-red-500" : ""
+                  }`}
                   required
                 />
+                {errors.email && (
+                  <p className="text-red-500 text-sm">{errors.email}</p>
+                )}
               </div>
               <textarea
                 name="message"
