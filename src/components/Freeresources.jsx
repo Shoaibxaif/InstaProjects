@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import report1 from "../assets/portfolio/report1.pdf";
 import ppt1 from "../assets/portfolio/College_ppt1.pdf";
-import ppt2 from "../assets/portfolio/College_ppt2.pptx";
+import ppt2 from "../assets/portfolio/College_ppt2.pdf";
 import cover1 from "../assets/portfolio/cover1.pdf";
 import cover2 from "../assets/portfolio/cover2.pdf";
 import poster1 from "../assets/portfolio/poster1.pdf";
