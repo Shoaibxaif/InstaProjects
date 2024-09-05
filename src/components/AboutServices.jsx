@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const AboutServices = () => {
   return (
@@ -13,9 +13,13 @@ const AboutServices = () => {
             />
           </div>
           <div className="lg:w-1/2 text-center lg:text-left">
-            <h2 className="text-3xl font-bold text-[#F5F5F5] mb-4">About Our Service</h2>
+            <h2 className="text-3xl font-bold text-[#F5F5F5] mb-4">About Us</h2>
             <p className="text-lg text-[#F5F5F5] mb-6">
-              Welcome to InstaProjects, where we take the hassle out of academic and presentation tasks. From comprehensive school and college assignments to engaging PowerPoint presentations, our experts are here to deliver high-quality work tailored to your needs. Experience the ease and efficiency of having professionals handle your projects, ensuring you have more time to focus on what truly matters.
+              About Us Welcome to InstaProjects, your go-to solution for
+              academic and presentation tasks. We specialize in delivering
+              high-quality assignments, custom presentations, and more, all with
+              timely delivery and affordable rates. Let our experts handle your
+              projects so you can focus on what matters most.
             </p>
             <div className="space-y-4 mx-auto items-center justify-center ">
               <div className="flex justify-start text-[#E94560]">

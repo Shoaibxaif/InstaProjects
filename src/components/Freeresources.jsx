@@ -78,7 +78,7 @@ const Freeresources = () => {
       : projects.filter((project) => project.category === activeCategory);
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-[#1A1A2E]">
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-[#16213E]">
       <div className="container mx-auto px-4 md:px-6">
         {/* Section Header */}
         <div className="text-center">
@@ -150,7 +150,7 @@ const Freeresources = () => {
           {filteredProjects.map((project) => (
             <a
               key={project.id}
-              className="relative overflow-hidden rounded-lg group bg-[#16213E]"
+              className="relative overflow-hidden rounded-lg group bg-[#1A1A2E]"
               href={project.url}
               title={`View ${project.title}`}
               target="_blank"

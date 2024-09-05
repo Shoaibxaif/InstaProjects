@@ -75,6 +75,17 @@ const Navbar = () => {
             </li>
             <li>
               <Link
+                to="service"
+                smooth={true}
+                duration={500}
+                className="block py-2 px-3 text-[#F5F5F5] rounded hover:bg-[#0F3460] md:hover:bg-transparent md:border-0 md:hover:text-[#E94560] md:p-0 cursor-pointer"
+                onClick={toggleMenu}
+              >
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="free-resources"
                 smooth={true}
                 duration={500}

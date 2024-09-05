@@ -11,7 +11,8 @@ import Freeresources from "./components/Freeresources";
 import { Element } from "react-scroll";
 import WhatsAppButton from "./components/WhatsAppButton";
 import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; 
+import "react-toastify/dist/ReactToastify.css";
+import Service from "./components/Service";
 
 const App = () => {
   return (
@@ -22,6 +23,9 @@ const App = () => {
       </Element>
       <Element name="about-services">
         <AboutServices />
+      </Element>
+      <Element name="service">
+        <Service />
       </Element>
       {/* <Element name="portfolio">
         <PortfolioSection />
